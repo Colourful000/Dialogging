@@ -1,6 +1,6 @@
-class Talking extends Phaser.Scene {
+class Macbeth extends Phaser.Scene {
     constructor() {
-        super("talkingScene");
+        super("macbethScene");
 
         // dialog constants
         this.DBOX_X = 0;			    // dialog box x-position
@@ -40,9 +40,9 @@ class Talking extends Phaser.Scene {
 
     create() {
         // parse dialog from JSON file
-        this.dialog = this.cache.json.get('dialog');
+        this.dialog = this.cache.json.get('macbeth');
         //console.log(this.dialog);
-
+        this.load.json('macbeth', 'json/macbeth.json');
         // add dialog box sprite
         this.dialogbox = this.add.sprite(this.DBOX_X, this.DBOX_Y, 'dialogbox').setOrigin(0);
 
@@ -52,6 +52,8 @@ class Talking extends Phaser.Scene {
 
         // ready the character dialog images offscreen
         this.witch1 = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+8, 'witch1').setOrigin(0, 1);
+        this.witch2 = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+8, 'witch2').setOrigin(0, 1);
+        this.witch3 = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+8, 'witch3').setOrigin(0, 1);
         this.homer = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+8, 'homer').setOrigin(0, 1);
         this.minerva = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+8, 'minerva').setOrigin(0, 1);
         this.neptune = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+8, 'neptune').setOrigin(0, 1);
@@ -113,7 +115,6 @@ class Talking extends Phaser.Scene {
             // make text box invisible
             this.dialogbox.visible = false;
             this.scene.start("macbethScene");
-            
 
         } else {
             // if not, set current speaker

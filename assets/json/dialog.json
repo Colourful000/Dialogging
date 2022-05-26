@@ -1,13 +1,13 @@
 [
 	[
 		{
-			"speaker" : "homer",
+			"speaker" : "neptune",
 			"dialog" : "Tell me, O muse, of that ingenious hero who travelled far and wide after he had sacked the famous town of Troy.",
 			"newSpeaker" : "true"
 		},
 		{
 			"speaker" : "homer",
-			"dialog" : "Many cities did he visit, and many were the nations with whose manners and customs he was acquainted."
+			"dialog" : " Add an extra dialog entry. This requires adding an additional object to the dialog.json file, where the object contains"
 		},
 		{	
 			"speaker" : "homer",
